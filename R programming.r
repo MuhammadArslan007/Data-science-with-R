@@ -67,3 +67,42 @@ ftr
 unclass(ftr)
 table(ftr)
 ftr
+data.frame(day=1:4,rain=c("monday","tuesday","wenesday","thursday"))
+data.frame(day=1:5,rain=c("m","t","w","th","f"),row.names = c("a","b","c","d","e"))
+#if error appear to istall packge.
+options(repos = c(cran="http://cran.rstudio.com"))
+install.packages("shiny")
+array(c(1,2,3,4,5),c(2,3,4,4),dimnames=list(c('a','b')))
+#subsetting [ used to asses the element of same class can be used more than one elements
+#[[ used to asses the only singale element of class no necessery be list or data frame 
+#$  search by name is also use in the place of [[
+vtr0
+vtr0[1]
+vtr0[[2]]
+names(vtr0)=(c('a','b','c','d','e'))
+vtr0['a']
+vtr0[['a']]
+vtr0[[1]]
+vtr0[c(1,2)]
+vtr0[[c(1)]]
+#$dollar sing not used in vector
+#matrix element acces 
+mtr1
+mtr1[1,2]
+mtr1[[1,2]]
+mtr1[1,]
+mtr1[2,1]
+mtr1[[2,1]]
+#list element access 
+ls=list('a',1,'b',c(2,3,4),'c',matrix(1:5,2,3))
+ls
+ls[[1]]
+ls[1]
+ls[[c(4,2)]] #list in list element access 
+#missing values is.na()
+vtr2=c(1,2,3,4,5,NA,6,NaN)#missing values
+is.na(vtr2)
+is.nan(vtr2)#nan value is detect by na fn but na value not detect by nan fn
+vtr2=!vtr2
+is.na(vtr2)
+#remove nan and na value

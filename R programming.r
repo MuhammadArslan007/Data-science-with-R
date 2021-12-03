@@ -103,6 +103,11 @@ ls[[c(4,2)]] #list in list element access
 vtr2=c(1,2,3,4,5,NA,6,NaN)#missing values
 is.na(vtr2)
 is.nan(vtr2)#nan value is detect by na fn but na value not detect by nan fn
-vtr2=!vtr2
-is.na(vtr2)
 #remove nan and na value
+a=is.na(vtr2)
+a
+vtr2[!a]
+a=complete.cases(vtr2) #we remove na value more than one vector or list
+a
+vtr2[a] #print vtr2 with out na value
+#remark if you want to remove na value from dataframe than it skip complete row if it have any na value

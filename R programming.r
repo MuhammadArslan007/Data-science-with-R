@@ -111,3 +111,30 @@ a=complete.cases(vtr2) #we remove na value more than one vector or list
 a
 vtr2[a] #print vtr2 with out na value
 #remark if you want to remove na value from dataframe than it skip complete row if it have any na value
+View(airquality) #view deafult data of R
+#  functions
+f=function(a=1,b,c){
+       print(a)
+      print(b)
+      print(c)
+      }
+f(1,2,3)  
+f(1,)
+f(1,4)
+f(b=23,c=2)
+args(lm) #for  knowing  arguments of bulit in function
+# vectorize operation on vectors   
+x<-c(1,2,3,4,5,);y<-c(6,7,8,9,10)
+x/y
+x+y
+x*y
+# vectorize operation on matrix 
+mtr1=matrix(1:6,2,2)
+mtr2=matrix(3:8,2,2)
+mtr1
+mtr2
+mtr1*mtr2   #dot product of matrix
+mtr1%*%mtr2   #matrix multiplication
+mtr1+mtr2
+mtr1/mtr2
+mtr1-mtr2
